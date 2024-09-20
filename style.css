@@ -7,7 +7,6 @@ body {
   min-height: 100dvh;
   margin: 0;
   padding: 0;
-  overflow: hidden;
   position: relative;
 }
 
@@ -16,4 +15,159 @@ h2,
 h3,
 h4 {
   text-wrap: pretty;
+}
+
+:root {
+  --FontSize-xsm: 12px;
+  --FontSize-sm: 16px;
+  --FontSize-md: 20px;
+  --FontSize-lg: 24px;
+  --FontSize-xlg: 28px;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+}
+
+header img {
+  width: 2rem;
+  height: 2rem;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  margin: 0.8rem 0rem 0rem 0.5rem;
+}
+
+header h3 {
+  width: 80%;
+  height: auto;
+  padding-left: 3rem;
+  font-size: var(--FontSize-md);
+}
+
+.navbar_container {
+  width: 50%;
+  height: auto;
+}
+
+.navbar_list li a {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  margin: 1.3rem 1rem 0rem 0rem;
+
+  color: black;
+  font-weight: 500;
+  font-size: var(--FontSize-md);
+  text-decoration: none;
+}
+
+.navbar_list li {
+  list-style: none;
+}
+
+.navbar_list li:nth-child(-n + 5) {
+  display: none;
+}
+/*Aside menú*/
+
+aside {
+  display: flex;
+  justify-content: space-around;
+}
+
+aside a {
+  text-decoration: none;
+}
+/*Main*/
+
+main {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+/*Home*/
+#home {
+  width: 100%;
+  padding: 0rem 2rem 2rem 2rem;
+  background-color: salmon;
+}
+/*About Section*/
+#about {
+  width: 100%;
+  padding: 0rem 2rem 2rem 2rem;
+  background-color: pink;
+}
+/*Hobbies Section*/
+#hobbies {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  text-align: start;
+}
+
+#hobbies article {
+  width: 30%;
+  height: 8rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+
+  background-color: gray;
+}
+
+#hobbies article img {
+  width: 3rem;
+  height: 3rem;
+
+  margin-left: 0.5rem;
+}
+
+#hobbies article h4 {
+  margin: 0px 0px 0px 0.5rem;
+}
+
+/*Skilss Section*/
+#skills {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  text-align: start;
+  background-color: coral;
+}
+
+#skills article {
+  width: 30%;
+  height: 8rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+
+  background-color: gray;
+}
+
+#skills article img {
+  width: 3rem;
+  height: 3rem;
+
+  margin-left: 0.5rem;
+}
+
+#skills article h4 {
+  margin: 0px 0px 0px 0.5rem;
 }
