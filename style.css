@@ -171,3 +171,38 @@ main {
 #skills article h4 {
   margin: 0px 0px 0px 0.5rem;
 }
+
+/*Education Section*/
+
+#education {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  text-align: start;
+  background-color: pink;
+}
+
+#education article {
+  width: 30%;
+  height: 8rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+
+  background-color: gray;
+}
+
+#education article figure {
+  width: 3rem;
+  height: 3rem;
+
+  margin-left: 0.5rem;
+}
+
+#education article h4 {
+  margin: 0px 0px 0px 0.5rem;
+}
