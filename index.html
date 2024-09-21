@@ -206,13 +206,15 @@
       <h2>Contact</h2>
 
       <section id="contact">
-        <form action="#">
+        <form id="contactForm">
           <input
             type="text"
             id="name"
             name="name"
             placeholder="Escribe tu nombre"
+            maxlength="50"
             required
+            minlength="3"
           />
 
           <input
@@ -221,14 +223,16 @@
             name="email"
             placeholder="Escribe tu correo"
             required
+            minlength="5"
           />
 
           <input
             type="text"
-            id="text"
-            name="text"
+            id="subject"
+            name="subject"
             placeholder="Asunto"
             required
+            minlength="4"
           />
 
           <textarea
@@ -237,14 +241,17 @@
             rows="6"
             placeholder="Escribe tu mensaje"
             required
+            minlength="4"
           ></textarea>
 
-          <button type="submit">Contactame</button>
+          <button id="sendBtn" type="submit">Contactame</button>
+          <div id="confirmMessage" style="color: green"></div>
         </form>
       </section>
     </main>
     <footer>
       <p>Desarrollado por Thalia Olvera 2024</p>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>
