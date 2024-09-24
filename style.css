@@ -195,6 +195,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: end;
+  align-items: center;
 
   background-color: var(--Gray800);
 }
@@ -363,5 +364,137 @@ footer {
 
   .navbar_list li:nth-child(-n + 5) {
     display: none;
+  }
+}
+
+@media (max-width: 320px) {
+  .logo_container {
+    width: 100%;
+    justify-content: center;
+    padding-left: 0.5rem;
+    font-size: var(--FontSize-lg);
+  }
+
+  .navbar_container {
+    width: 45%;
+  }
+
+  .navbar_list {
+    padding-right: 0px;
+    margin-right: 0px;
+  }
+
+  .navbar_list li a {
+    font-size: var(--FontSize-lg);
+  }
+
+  aside {
+    width: 100%;
+    left: 0rem;
+  }
+
+  aside .item_container {
+    width: 15%;
+  }
+  /*Home*/
+  #home {
+    width: 100%;
+    padding-left: 0rem;
+  }
+
+  /*About Section*/
+  #about {
+    width: 100%;
+    padding-left: 0rem;
+  }
+
+  /*Hobbies Section*/
+  #hobbies {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 4px;
+    text-align: center;
+    align-items: center;
+  }
+
+  #hobbies article {
+    width: 100%;
+    height: 8rem;
+
+    justify-content: center;
+  }
+
+  #hobbies article img {
+    width: 4rem;
+    height: 4rem;
+
+    margin-left: 0rem;
+  }
+
+  #hobbies article h4 {
+    margin: 0px 0px 0px 0rem;
+  }
+
+  /*Skilss Section*/
+  #skills {
+    flex-direction: column;
+    text-align: center;
+    flex-wrap: nowrap;
+    gap: 4px;
+    text-align: center;
+    align-items: center;
+  }
+
+  #skills article {
+    width: 100%;
+    height: 8rem;
+
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--Gray800);
+  }
+
+  #skills article img {
+    width: 4rem;
+    height: 4rem;
+
+    margin-left: 0rem;
+  }
+
+  #skills article h4 {
+    margin: 0px 0px 0px 0rem;
+    background-color: pink;
+  }
+
+  #education {
+    flex-direction: column;
+    text-align: center;
+    flex-wrap: nowrap;
+    gap: 4px;
+    text-align: center;
+    align-items: center;
+  }
+
+  #education article {
+    width: 100%;
+    height: 8rem;
+
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--Gray800);
+  }
+
+  #education article img {
+    width: 4rem;
+    height: 4rem;
+
+    margin-left: 0rem;
+  }
+
+  #education article h4 {
+    margin: 0px 0px 0px 0rem;
+    background-color: pink;
   }
 }
