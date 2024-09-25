@@ -268,16 +268,6 @@ main {
   background-color: var(--Gray800);
 }
 
-#education article figure {
-  width: 3rem;
-  height: 3rem;
-
-  margin-left: 0.5rem;
-}
-
-#education article h4 {
-  margin: 0px 0px 0px 0.5rem;
-}
 /*Portfolio Section*/
 
 #portfolio {
@@ -340,6 +330,31 @@ main {
   gap: 10px;
 }
 
+#contact form :nth-child(-n + 5) {
+  border-radius: 4px;
+}
+
+#contact form input {
+  background-color: transparent;
+  border-color: 1px solid var(--GrayColor);
+  color: var(--GrayColor);
+}
+
+#contact form textarea {
+  resize: none;
+  outline: none;
+  background-color: transparent;
+  color: var(--GrayColor);
+}
+
+#contact form button {
+  width: 100%;
+  height: 2rem;
+  color: var(--GrayColor);
+  border-style: none;
+  background: linear-gradient(90deg, #0c599d, #4091b7, #0e6674);
+}
+
 /*Footer*/
 
 footer {
@@ -354,19 +369,183 @@ footer {
 
 /*Tablet View*/
 
-@media (max-width: 437px) {
-  .navbar_list {
-    display: flex;
-    justify-content: end;
+@media (max-width: 450px) {
+  .logo_container {
+    width: 100%;
+  }
 
-    margin-right: 1.5rem;
+  .logo_container h3 {
+    font-size: var(--FontSize-lg);
+  }
+
+  .logo_container img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .navbar_container {
+    width: 30%;
+    justify-content: start;
+    align-items: center;
+  }
+
+  .navbar_list {
+    padding-right: 0rem;
   }
 
   .navbar_list li:nth-child(-n + 5) {
     display: none;
   }
+
+  /*Aside menú*/
+
+  aside {
+    width: 80%;
+  }
+
+  aside .item {
+    color: white;
+    padding-right: 5px;
+  }
+
+  /*Main*/
+
+  main {
+    justify-content: center;
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+  /*Home*/
+  #home {
+    width: 90%;
+    color: var(--Gray300);
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  /*About Section*/
+  #about {
+    width: 90%;
+    padding-left: 3rem;
+    padding-right: 3rem;
+
+    color: var(--Gray300);
+  }
+  /*Hobbies Section*/
+  #hobbies {
+    width: 60%;
+
+    flex-direction: column;
+
+    gap: 5px;
+    align-items: center;
+    text-align: center;
+  }
+
+  #hobbies article {
+    width: 100%;
+    height: 6rem;
+
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--Gray800);
+  }
+
+  /*Skilss Section*/
+  #skills {
+    width: 60%;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    align-items: center;
+    text-align: center;
+  }
+
+  #skills article {
+    width: 100%;
+    height: 6rem;
+
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--Gray800);
+  }
+
+  /*Education Section*/
+
+  #education {
+    width: 60%;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    align-items: center;
+    text-align: center;
+  }
+
+  #education article {
+    width: 100%;
+    height: 6rem;
+
+    flex-direction: column;
+    justify-content: center;
+
+    background-color: var(--Gray800);
+  }
+
+  /*Portfolio Section*/
+
+  #portfolio {
+    width: 60%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+  }
+
+  #portfolio article {
+    width: 100%;
+    height: 8rem;
+    align-items: center;
+
+    background-color: var(--Gray800);
+  }
+
+  #portfolio article img {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .button_container {
+    width: 100%;
+  }
+
+  /*Contact Section*/
+
+  #contact {
+    width: 80%;
+  }
+
+  #contact form {
+    width: 70%;
+  }
+
+  #contact form :nth-child(-n + 5) {
+    border-radius: 4px;
+  }
+
+  #contact form input {
+    background-color: transparent;
+    border-color: 1px solid var(--GrayColor);
+    color: var(--GrayColor);
+  }
+
+  #contact form textarea {
+    height: 6rem;
+  }
 }
 
+/*Mobile view*/
 @media (max-width: 320px) {
   .logo_container {
     width: 100%;
@@ -376,11 +555,11 @@ footer {
   }
 
   .navbar_container {
-    width: 45%;
+    width: 50%;
   }
 
   .navbar_list {
-    padding-right: 0px;
+    padding-right: 10px;
     margin-right: 0px;
   }
 
@@ -398,13 +577,13 @@ footer {
   }
   /*Home*/
   #home {
-    width: 100%;
+    width: 60%;
     padding-left: 0rem;
   }
 
   /*About Section*/
   #about {
-    width: 100%;
+    width: 60%;
     padding-left: 0rem;
   }
 
@@ -464,13 +643,11 @@ footer {
 
   #skills article h4 {
     margin: 0px 0px 0px 0rem;
-    background-color: pink;
   }
 
   #education {
     flex-direction: column;
-    text-align: center;
-    flex-wrap: nowrap;
+    justify-content: center;
     gap: 4px;
     text-align: center;
     align-items: center;
@@ -480,21 +657,34 @@ footer {
     width: 100%;
     height: 8rem;
 
-    justify-content: center;
-    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    color: var(--GrayColor);
 
     background-color: var(--Gray800);
   }
 
-  #education article img {
+  #portfolio {
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+    text-align: center;
+  }
+
+  #portfolio article {
+    width: 100%;
+    align-items: center;
+  }
+
+  #portfolio article img {
     width: 4rem;
     height: 4rem;
 
     margin-left: 0rem;
   }
 
-  #education article h4 {
-    margin: 0px 0px 0px 0rem;
-    background-color: pink;
+  #portfolio .button_container {
+    width: 100%;
   }
 }
