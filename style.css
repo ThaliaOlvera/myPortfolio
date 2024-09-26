@@ -23,11 +23,11 @@ h4 {
 }
 
 :root {
-  --FontSize-xsm: 12px;
-  --FontSize-sm: 16px;
-  --FontSize-md: 20px;
-  --FontSize-lg: 24px;
-  --FontSize-xlg: 28px;
+  --FontSize-xsm: 1rem;
+  --FontSize-sm: 1.5rem;
+  --FontSize-md: 2.5rem;
+  --FontSize-lg: 3rem;
+  --FontSize-xlg: 5rem;
 
   --BgColor: #0d0d0d;
   --GrayColor: #f2f2f2;
@@ -40,6 +40,7 @@ h4 {
 
 header {
   display: flex;
+  font-size: var(--FontSize-sm);
 }
 
 .logo_container {
@@ -48,6 +49,7 @@ header {
   justify-content: stretch;
   align-items: center;
   padding-left: 0.3rem;
+  margin-left: 0.5rem;
 }
 
 .logo_container img {
@@ -65,6 +67,7 @@ header {
   display: flex;
   justify-content: end;
   align-items: center;
+  margin-right: 0.5rem;
 }
 
 .navbar_list {
@@ -84,14 +87,19 @@ header {
 .navbar_list li a {
   color: var(--GrayColor);
   font-weight: 500;
-  font-size: var(--FontSize-md);
+  font-size: var(--FontSize-sm);
   text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar_list li a:hover {
+  color: var(--Lightblue);
 }
 
 /*Aside menú*/
 
 aside {
-  width: 40%;
+  width: 15%;
   height: 12rem;
   position: fixed;
   top: 40%;
@@ -102,7 +110,7 @@ aside {
 }
 
 aside .item_container {
-  width: 15%;
+  width: 30%;
   height: 24%;
 
   display: flex;
@@ -111,7 +119,7 @@ aside .item_container {
   align-items: center;
   text-align: end;
   background-color: var(--Gray300);
-  padding-right: 8px;
+  padding-right: 1rem;
 }
 
 .item_container:nth-child(1) {
@@ -125,18 +133,19 @@ aside .item_container {
 aside article img {
   width: 30px;
   height: 30px;
+  margin-left: 4px;
 }
 
 aside .item {
   display: flex;
   align-items: center;
   justify-content: end;
-  width: 80%;
+  width: 100%;
   height: 2.5rem;
   text-decoration: none;
   text-align: end;
-  font-size: var(--FontSize-md);
-  color: pink;
+  font-size: var(--FontSize-sm);
+  color: var(--GrayColor);
   margin-left: -40px;
   margin-right: 10px;
 }
@@ -146,7 +155,6 @@ aside .item {
   width: 80%;
   display: flex;
   transition: 0.7s;
-  color: var(--GrayColor);
   padding-left: 8px;
   margin-right: 10px;
 
@@ -164,18 +172,40 @@ main {
   padding-left: 3rem;
   padding-right: 3rem;
 }
+
+main h2 {
+  font-size: var(--FontSize-lg);
+}
 /*Home*/
+#home h1 {
+  font-size: var(--FontSize-xlg);
+  margin-bottom: 0px;
+}
+
+#home p {
+  width: 70%;
+}
 #home {
   width: 90%;
   color: var(--Gray300);
   padding-left: 4rem;
+  font-size: var(--FontSize-sm);
 }
+
 /*About Section*/
 #about {
   width: 90%;
   padding-left: 2rem;
 
   color: var(--Gray300);
+}
+
+#about h2 {
+  font-size: var(--FontSize-lg);
+}
+
+#about p {
+  font-size: var(--FontSize-sm);
 }
 /*Hobbies Section*/
 #hobbies {
@@ -185,7 +215,6 @@ main {
   justify-content: center;
   flex-wrap: wrap;
   gap: 10px;
-  text-align: start;
 }
 
 #hobbies article {
@@ -194,15 +223,27 @@ main {
 
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  justify-content: center;
   align-items: center;
 
+  border-radius: 10px;
   background-color: var(--Gray800);
+  box-shadow: 0px 8px 6px -4px rgba(53, 208, 242, 0.55);
+  transition: ease-out 300ms;
+}
+
+#hobbies article:hover {
+  transform: scale(1.03);
+}
+
+#hobbies article h4 {
+  font-size: var(--FontSize-sm);
+  padding-top: 0.5rem;
 }
 
 #hobbies article img {
-  width: 3rem;
-  height: 3rem;
+  width: 4rem;
+  height: 4rem;
 
   margin-left: 0.5rem;
 }
@@ -219,7 +260,8 @@ main {
   justify-content: center;
   flex-wrap: wrap;
   gap: 10px;
-  text-align: start;
+  text-align: center;
+  font-size: var(--FontSize-sm);
 }
 
 #skills article {
@@ -229,19 +271,50 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: end;
+  align-items: center;
 
+  border-radius: 10px;
+  transition: ease-out 300ms;
   background-color: var(--Gray800);
 }
 
+.skill--logo1 {
+  box-shadow: 0px 8px 6px -4px rgba(245, 98, 24, 1);
+}
+
+.skill--logo2 {
+  box-shadow: 0px 8px 6px -4px rgba(255, 195, 0, 1);
+}
+
+.skill--logo3 {
+  box-shadow: 0px 8px 6px -4px rgba(164, 244, 121, 1);
+}
+
+.skill--logo4 {
+  box-shadow: 0px 8px 6px -4px rgba(8, 41, 94, 1);
+}
+
+.skill--logo5 {
+  box-shadow: 0px 8px 6px -4px rgba(0, 168, 198, 1);
+}
+
+.skill--logo6 {
+  box-shadow: 0px 8px 6px -4px rgba(255, 251, 255, 1);
+}
+
+#skills article:hover {
+  transform: scale(1.03);
+}
+
 #skills article img {
-  width: 3rem;
-  height: 3rem;
+  width: 5rem;
+  height: 5rem;
 
   margin-left: 0.5rem;
 }
 
 #skills article h4 {
-  margin: 0px 0px 0px 0.5rem;
+  margin: 0rem 0rem 0.5rem 0rem;
 }
 
 /*Education Section*/
@@ -258,14 +331,36 @@ main {
 
 #education article {
   width: 30%;
-  height: 8rem;
+  height: 14rem;
 
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
   color: var(--GrayColor);
+  border-radius: 10px;
+
+  transition: ease-out 300ms;
 
   background-color: var(--Gray800);
+  box-shadow: 0px 8px 6px -4px rgba(53, 208, 242, 0.55);
+}
+
+#education article:hover {
+  transform: scale(1.03);
+}
+
+.education_cardcontainer img {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 10px;
+}
+
+.education_cardcontainer p {
+  margin-bottom: 0px;
+  margin-top: 0px;
 }
 
 /*Portfolio Section*/
@@ -277,34 +372,51 @@ main {
   justify-content: center;
   flex-wrap: wrap;
   gap: 10px;
-  text-align: start;
 }
 
 #portfolio article {
   width: 30%;
-  height: 8rem;
+  height: 12rem;
 
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  justify-content: center;
+  align-items: center;
 
   background-color: var(--Gray800);
+  box-shadow: 0px 8px 6px -4px rgba(53, 208, 242, 0.55);
+}
+
+#portfolio article img:hover {
+  transform: scale(1.1);
 }
 
 #portfolio article img {
-  width: 3rem;
-  height: 3rem;
-
-  margin-left: 0.5rem;
-}
-
-#portfolio article h4 {
-  margin: 0px 0px 0px 0.5rem;
+  width: 8rem;
+  height: 8rem;
+  transition: ease-out 300ms;
 }
 
 .button_container {
+  width: 100%;
+  height: 30%;
   display: flex;
-  flex-direction: column;
+  align-items: center;
+}
+
+.button_container button {
+  width: 50%;
+  height: 3rem;
+  background-color: transparent;
+  border-style: none;
+  color: var(--GrayColor);
+  font-size: var(--FontSize-xsm);
+  margin-top: 8px;
+  transition: ease-out 300ms;
+}
+
+.button_container button:hover {
+  transform: scale(1.1);
 }
 
 /*Contact Section*/
@@ -326,33 +438,49 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-
+  align-items: center;
   gap: 10px;
 }
 
 #contact form :nth-child(-n + 5) {
+  width: 50%;
   border-radius: 4px;
+  border-style: 4px;
+  color: var(--GrayColor);
+  font-size: var(--FontSize-xsm);
+}
+
+#contact form input::placeholder {
+  color: var(--Gray300);
 }
 
 #contact form input {
+  height: 3rem;
   background-color: transparent;
   border-color: 1px solid var(--GrayColor);
   color: var(--GrayColor);
 }
 
 #contact form textarea {
+  height: 14rem;
   resize: none;
   outline: none;
   background-color: transparent;
+  border-color: 1px solid var(--GrayColor);
   color: var(--GrayColor);
 }
 
 #contact form button {
   width: 100%;
-  height: 2rem;
+  height: 3rem;
   color: var(--GrayColor);
   border-style: none;
   background: linear-gradient(90deg, #0c599d, #4091b7, #0e6674);
+  transition: ease-out 500ms;
+}
+
+#contact form button:hover {
+  transform: scale(1.1);
 }
 
 /*Footer*/
@@ -367,15 +495,35 @@ footer {
   color: var(--GrayColor);
 }
 
+/*Laptop small view*/
+@media (max-width: 908px) {
+  aside {
+    width: 30%;
+  }
+
+  aside .item_container {
+    padding-right: 1rem;
+  }
+
+  aside article img {
+    margin-left: 25px;
+  }
+
+  aside .item {
+    margin-left: -40px;
+    margin-right: 10px;
+  }
+}
+
 /*Tablet View*/
 
-@media (max-width: 450px) {
+@media (max-width: 550px) {
   .logo_container {
     width: 100%;
   }
 
   .logo_container h3 {
-    font-size: var(--FontSize-lg);
+    font-size: var(--FontSize-sm);
   }
 
   .logo_container img {
@@ -393,6 +541,10 @@ footer {
     padding-right: 0rem;
   }
 
+  .navbar_list a {
+    font-size: var(--FontSize-sm);
+  }
+
   .navbar_list li:nth-child(-n + 5) {
     display: none;
   }
@@ -400,12 +552,17 @@ footer {
   /*Aside menú*/
 
   aside {
-    width: 80%;
+    width: 50%;
+  }
+
+  aside .item_container {
+    width: 27%;
+    height: 24%;
   }
 
   aside .item {
-    color: white;
-    padding-right: 5px;
+    margin-left: -60px;
+    margin-right: 10px;
   }
 
   /*Main*/
@@ -436,14 +593,14 @@ footer {
 
     flex-direction: column;
 
-    gap: 5px;
+    gap: 20px;
     align-items: center;
     text-align: center;
   }
 
   #hobbies article {
     width: 100%;
-    height: 6rem;
+    height: 8rem;
 
     justify-content: center;
     align-items: center;
@@ -456,14 +613,14 @@ footer {
     width: 60%;
     flex-direction: column;
     justify-content: center;
-    gap: 5px;
+    gap: 20px;
     align-items: center;
     text-align: center;
   }
 
   #skills article {
     width: 100%;
-    height: 6rem;
+    height: 8rem;
 
     justify-content: center;
     align-items: center;
@@ -477,17 +634,18 @@ footer {
     width: 60%;
     flex-direction: column;
     justify-content: center;
-    gap: 5px;
+    gap: 20px;
     align-items: center;
     text-align: center;
   }
 
   #education article {
     width: 100%;
-    height: 6rem;
+    height: 14rem;
 
     flex-direction: column;
     justify-content: center;
+    font-size: var(--FontSize-sm);
 
     background-color: var(--Gray800);
   }
@@ -499,35 +657,39 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
     text-align: center;
   }
 
   #portfolio article {
     width: 100%;
-    height: 8rem;
+    height: 14rem;
     align-items: center;
 
     background-color: var(--Gray800);
   }
 
   #portfolio article img {
-    width: 4rem;
-    height: 4rem;
+    width: 8rem;
+    height: 8rem;
   }
 
   .button_container {
     width: 100%;
   }
 
+  .button_container button {
+    font-size: var(--FontSize-sm);
+  }
+
   /*Contact Section*/
 
   #contact {
-    width: 80%;
+    width: 70%;
   }
 
   #contact form {
-    width: 70%;
+    width: 100%;
   }
 
   #contact form :nth-child(-n + 5) {
@@ -541,7 +703,7 @@ footer {
   }
 
   #contact form textarea {
-    height: 6rem;
+    height: 14rem;
   }
 }
 
@@ -549,13 +711,14 @@ footer {
 @media (max-width: 320px) {
   .logo_container {
     width: 100%;
-    justify-content: center;
+    justify-content: start;
     padding-left: 0.5rem;
     font-size: var(--FontSize-lg);
   }
 
   .navbar_container {
     width: 50%;
+    justify-content: end;
   }
 
   .navbar_list {
@@ -564,7 +727,7 @@ footer {
   }
 
   .navbar_list li a {
-    font-size: var(--FontSize-lg);
+    font-size: var(--FontSize-sm);
   }
 
   aside {
@@ -575,23 +738,47 @@ footer {
   aside .item_container {
     width: 15%;
   }
+  main {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  main h2 {
+    font-size: var(--FontSize-lg);
+  }
   /*Home*/
   #home {
-    width: 60%;
-    padding-left: 0rem;
+    width: 100%;
+    padding-left: 3rem;
+  }
+
+  #home h1 {
+    font-size: var(--FontSize-lg);
+  }
+
+  #home p {
+    width: 100%;
+    font-size: var(--FontSize-xsm);
   }
 
   /*About Section*/
   #about {
-    width: 60%;
-    padding-left: 0rem;
+    width: 100%;
+    padding-left: 3rem;
+  }
+
+  #about h2 {
+    font-size: var(--FontSize-md);
+  }
+  #about p {
+    font-size: var(--FontSize-xsm);
   }
 
   /*Hobbies Section*/
   #hobbies {
     flex-direction: column;
     flex-wrap: nowrap;
-    gap: 4px;
+    gap: 20px;
     text-align: center;
     align-items: center;
   }
@@ -619,7 +806,7 @@ footer {
     flex-direction: column;
     text-align: center;
     flex-wrap: nowrap;
-    gap: 4px;
+    gap: 20px;
     text-align: center;
     align-items: center;
   }
@@ -648,28 +835,27 @@ footer {
   #education {
     flex-direction: column;
     justify-content: center;
-    gap: 4px;
+    gap: 20px;
     text-align: center;
     align-items: center;
   }
 
   #education article {
     width: 100%;
-    height: 8rem;
+    height: 12rem;
 
     display: flex;
     flex-direction: column;
     justify-content: end;
     color: var(--GrayColor);
+    font-size: var(--FontSize-xsm);
 
     background-color: var(--Gray800);
   }
 
   #portfolio {
     flex-direction: column;
-    justify-content: center;
-    gap: 4px;
-    text-align: center;
+    gap: 20px;
   }
 
   #portfolio article {
@@ -678,13 +864,38 @@ footer {
   }
 
   #portfolio article img {
-    width: 4rem;
-    height: 4rem;
+    width: 8rem;
+    height: 8rem;
 
     margin-left: 0rem;
   }
 
   #portfolio .button_container {
     width: 100%;
+  }
+
+  .button_container button {
+    font-size: var(--FontSize-xsm);
+  }
+
+  /*Contact Section*/
+
+  #contact {
+    width: 100%;
+  }
+
+  #contact form {
+    height: 24rem;
+    gap: 10px;
+  }
+
+  #contact form :nth-child(-n + 5) {
+    width: 75%;
+
+    font-size: var(--FontSize-xsm);
+  }
+
+  #contact form input {
+    height: 3rem;
   }
 }
