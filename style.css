@@ -381,7 +381,7 @@ main h2 {
 
 #portfolio article {
   width: 30%;
-  height: 12rem;
+  height: 20rem;
 
   display: flex;
   flex-direction: column;
@@ -398,8 +398,8 @@ main h2 {
 }
 
 #portfolio article img {
-  width: 8rem;
-  height: 8rem;
+  width: 15rem;
+  height: 15rem;
   transition: ease-out 300ms;
 }
 
@@ -410,18 +410,21 @@ main h2 {
   align-items: center;
 }
 
-.button_container button {
+.button_container a {
   width: 50%;
   height: 3rem;
+
+  text-align: center;
   background-color: transparent;
   border-style: none;
+  text-decoration: none;
   color: var(--GrayColor);
   font-size: var(--FontSize-xsm);
   margin-top: 8px;
   transition: ease-out 300ms;
 }
 
-.button_container button:hover {
+.button_container a:hover {
   transform: scale(1.1);
 }
 
@@ -689,7 +692,7 @@ footer {
     width: 100%;
   }
 
-  .button_container button {
+  .button_container a {
     font-size: var(--FontSize-xsm);
   }
 
@@ -885,7 +888,7 @@ footer {
     width: 100%;
   }
 
-  .button_container button {
+  .button_container a {
     font-size: var(--FontSize-xsm);
   }
 
