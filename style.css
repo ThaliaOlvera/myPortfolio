@@ -505,6 +505,27 @@ footer {
 }
 
 /*Laptop small view*/
+@media (max-width: 1440px) {
+  #home p {
+    width: 100%;
+  }
+
+  aside {
+    width: 20%;
+  }
+
+  aside .item_container {
+    width: 27%;
+    height: 24%;
+  }
+
+  aside .item {
+    margin-left: -90px;
+    margin-right: 30px;
+  }
+}
+
+/*Laptop small view*/
 @media (max-width: 908px) {
   #home p {
     width: 100%;
