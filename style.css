@@ -924,6 +924,8 @@ footer {
 
   .button_container a {
     font-size: var(--FontSize-xsm);
+    margin-top: 0px;
+    margin-bottom: 10px;
   }
 
   /*Contact Section*/
